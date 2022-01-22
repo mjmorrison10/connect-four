@@ -32,15 +32,13 @@ body {
 }
 
 .player-one {
-  background-color: red;
-  border-radius: 50%;
-  cursor: auto!important;
+  background: center / contain no-repeat url("./img/link.png");
+  cursor: auto !important;
 }
 
 .player-two {
-  background-color: blue;
-  border-radius: 50%;
-  cursor: auto!important;
+  background: center / contain no-repeat url("./img/zelda.png");
+  cursor: auto !important;
 }
 
 .reset {
