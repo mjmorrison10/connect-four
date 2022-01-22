@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  border: 1px solid;
+  /* height: 120px; */
+  /* width: 145px; */
+  height: 600px;
+  width: 700px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grid div {
+  height: 100px;
+  width: 100px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.player-one {
+  background-color: red;
+  border-radius: 50%;
+  cursor: auto!important;
+}
+
+.player-two {
+  background-color: blue;
+  border-radius: 50%;
+  cursor: auto!important;
+}
+
+.reset {
+  max-width: 700px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0 0 0;
+  cursor: pointer;
+}
