@@ -125,6 +125,10 @@ function checkWinning() {
       sq4.classList.contains("player-one")
     ) {
       isPlaying = false;
+      sq1.style.backgroundColor = "green";
+      sq2.style.backgroundColor = "green";
+      sq3.style.backgroundColor = "green";
+      sq4.style.backgroundColor = "green";
       result.innerHTML = "Player One wins!";
     } else if (
       sq1.classList.contains("player-two") &&
@@ -133,9 +137,12 @@ function checkWinning() {
       sq4.classList.contains("player-two")
     ) {
       isPlaying = false;
+      sq1.style.backgroundColor = "red";
+      sq2.style.backgroundColor = "red";
+      sq3.style.backgroundColor = "red";
+      sq4.style.backgroundColor = "red";
       result.innerHTML = "Player two wins!";
     }
-
   });
 }
 
@@ -145,17 +152,11 @@ function init() {
   displayCurrentPlayer.innerHTML = currentPlayer;
 
   squares.forEach((sq, i) => {
+    sq.style.backgroundColor = null;
     sq.classList.remove("player-one");
     sq.classList.remove("player-two");
     if (i < 42) sq.classList.remove("taken");
   });
 }
 
-
 resetBtn.addEventListener("click", init);
-
-// const btnArr = [result, displayCurrentPlayer.closest("h3")];
-
-// btnArr.forEach((btn) => btn.addEventListener("click", init));
-
-// checkWinning();
